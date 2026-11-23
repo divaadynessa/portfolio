@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Diva — Marketing &amp; Social Media Portfolio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fredoka:wght@400;500;600;700&display=swap">
+<style>
+:root{--ink:#2a1a3d;--pink:#ff7ab8;--pink2:#ffc9e0;--blue:#3b9cff;--sky:#8fdcf2;--sky2:#d6f0fb;--cream:#fff6f1;--muted:#6b5a7e;box-sizing:border-box}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%}
+body{font-family:Fredoka,-apple-system,"SF Pro Rounded",system-ui,sans-serif;color:var(--ink);background:repeating-linear-gradient(90deg,var(--pink2) 0 34px,var(--sky2) 34px 68px);line-height:1.5;-webkit-font-smoothing:antialiased}
+.hand{font-family:Caveat,"Segoe Script",cursive;font-weight:700}
+h1,h2,h3{line-height:1.1;letter-spacing:-.01em}
+.star{width:1em;height:1em;fill:currentColor;stroke:var(--ink);stroke-width:1.6;stroke-linejoin:round;flex:none}
+/* header */
+header{position:fixed;z-index:30;top:0;left:0;right:0;padding-top:env(safe-area-inset-top,0px);background:var(--pink);border-bottom:3px solid var(--ink)}
+header::after{content:"";position:absolute;left:0;right:0;top:100%;height:14px;background:radial-gradient(circle at 12px 0,var(--pink) 11px,var(--ink) 11px 14px,transparent 14.5px) 0 0/24px 14px repeat-x}
+.mq{overflow:hidden;background:var(--ink);color:#fff;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;padding:6px 0}
+.mqi{display:inline-flex;gap:26px;align-items:center;animation:mv 28s linear infinite;padding-right:26px}
+.mqi .star{color:var(--sky);stroke:#fff;stroke-width:1.2}
+@keyframes mv{to{transform:translateX(-50%)}}
+.nav1{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px clamp(12px,3vw,32px)}
+.logo{font-size:24px;font-weight:700;display:flex;align-items:center;gap:6px}
+.logo .star{color:#fff;font-size:22px}
+.seg{display:flex;background:var(--cream);border:2.5px solid var(--ink);border-radius:999px;padding:3px;box-shadow:3px 3px 0 var(--ink)}
+.seg button{font:600 13px Fredoka,sans-serif;border:0;background:transparent;color:var(--ink);padding:7px 14px;border-radius:999px;cursor:pointer}
+.seg button.on{background:var(--blue);color:#fff}
+/* sections */
+main{width:100%}
+section{padding:calc(env(safe-area-inset-top,0px) + 150px) clamp(16px,5vw,56px) 120px;max-width:1120px;margin:0 auto;width:100%}
+.mode-slide{position:fixed;inset:0;display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
+.mode-slide::-webkit-scrollbar{display:none}
+.mode-slide section{flex:0 0 100%;height:100%;overflow-y:auto;scroll-snap-align:start;scroll-snap-stop:always;max-width:none;padding-left:max(16px,calc((100% - 1000px)/2));padding-right:max(16px,calc((100% - 1000px)/2))}
+h2{font-size:clamp(32px,6vw,54px);margin-bottom:6px}
+h2 mark{background:var(--blue);color:#fff;padding:0 .25em;border-radius:12px;border:2.5px solid var(--ink);box-shadow:3px 3px 0 var(--ink);display:inline-block;transform:rotate(-2deg)}
+.sub{font-size:22px;color:var(--blue);margin-bottom:22px}
+.card{background:var(--cream);border:2.5px solid var(--ink);border-radius:22px;padding:clamp(16px,3vw,24px);box-shadow:6px 6px 0 var(--ink)}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}
+.muted{color:var(--muted)}
+.tilt:nth-child(odd){transform:rotate(-1.2deg)}.tilt:nth-child(even){transform:rotate(1deg)}
+.btn{display:inline-block;text-decoration:none;font:600 15px Fredoka,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:var(--ink);background:var(--pink);border:2.5px solid var(--ink);border-radius:12px;padding:12px 20px;box-shadow:4px 4px 0 var(--ink);transition:.15s}
+.btn:hover,.btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
+.btn.b{background:var(--sky)}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.chip{display:inline-block;font-weight:600;font-size:14px;padding:6px 14px;border-radius:999px;border:2.5px solid var(--ink);background:#fff}
+.chip:nth-child(3n+1){background:var(--pink2)}.chip:nth-child(3n+2){background:var(--sky2)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+/* hero */
+.hero{display:grid;grid-template-columns:1fr;border:3px solid var(--ink);border-radius:26px;overflow:hidden;background:var(--cream);box-shadow:8px 8px 0 var(--ink)}
+@media(min-width:820px){.hero{grid-template-columns:1.1fr 1fr}}
+.collage{position:relative;min-height:340px;background:var(--pink2) radial-gradient(var(--pink) 2px,transparent 2.5px) 0 0/22px 22px;border-bottom:3px solid var(--ink)}
+@media(min-width:820px){.collage{border-bottom:0;border-right:3px solid var(--ink)}}
+.stk{position:absolute;border:2.5px solid var(--ink);box-shadow:4px 4px 0 var(--ink);border-radius:16px;background:#fff;padding:10px 14px;font-weight:700}
+.idc{left:7%;top:30%;width:62%;background:linear-gradient(135deg,#fff3c4,#ffd9ec);transform:rotate(-6deg);font-size:14px}
+.idc b{display:block;font-size:17px;color:var(--blue)}
+.s1{right:8%;top:8%;background:var(--blue);color:#fff;transform:rotate(7deg);border-radius:50%;width:92px;height:92px;display:grid;place-items:center;text-align:center;font-size:13px;line-height:1.1;padding:6px}
+.s2{left:8%;top:8%;background:var(--sky);transform:rotate(-8deg)}
+.s3{right:6%;bottom:9%;background:var(--pink);transform:rotate(5deg)}
+.note{position:absolute;font-size:22px;color:var(--ink)}
+.n1{left:10%;bottom:8%;transform:rotate(-4deg)}.n2{right:30%;top:20%}
+.bigstar{position:absolute;right:4%;bottom:26%;font-size:64px;color:var(--sky);transform:rotate(14deg)}
+.hbody{padding:clamp(20px,4vw,40px);display:flex;flex-direction:column;justify-content:center;gap:16px}
+.kick{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--muted)}
+.hbody h1{font-size:clamp(40px,7vw,64px)}
+.hbody h1 em{font-style:normal;color:var(--pink);-webkit-text-stroke:0}
+/* bead strip */
+.beads{display:flex;gap:6px;flex-wrap:wrap;margin:26px 0 0}
+.beads span{width:34px;height:34px;border-radius:50%;background:#fff;border:2.5px solid var(--ink);display:grid;place-items:center;font-weight:700;font-size:15px;box-shadow:2px 2px 0 var(--ink)}
+.beads span:nth-child(3n){background:var(--pink2)}.beads span:nth-child(3n+1){background:var(--sky2)}
+/* role card */
+.role h3{font-size:22px}
+.tag{display:inline-block;margin:8px 0 10px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--blue);color:#fff;border-radius:8px;padding:3px 10px}
+.role ul{padding-left:18px;color:var(--muted);font-size:15px}.role li{margin:5px 0}
+/* stats */
+.stat b{display:block;font-size:clamp(40px,7vw,60px);color:var(--pink);-webkit-text-stroke:2px var(--ink);paint-order:stroke fill;letter-spacing:-.02em}
+.stat span{font-size:15px;color:var(--muted)}
+/* gallery */
+.frame{border:2.5px solid var(--ink);border-radius:20px;padding:10px;background:#fff linear-gradient(var(--blue) 1.5px,transparent 1.5px) 0 0/22px 22px,linear-gradient(90deg,var(--blue) 1.5px,transparent 1.5px) 0 0/22px 22px;box-shadow:5px 5px 0 var(--ink)}
+.pic{aspect-ratio:4/5;border:2.5px solid var(--ink);border-radius:14px;display:grid;place-items:center;font-size:56px}
+.p1{background:linear-gradient(160deg,var(--pink2),var(--pink))}.p2{background:linear-gradient(160deg,var(--sky2),var(--blue))}.p3{background:linear-gradient(160deg,var(--pink),var(--blue))}.p4{background:linear-gradient(160deg,var(--sky),var(--pink2))}
+.cap{margin-top:8px;background:var(--sky);border:2.5px solid var(--ink);border-radius:10px;padding:6px 10px;font-size:14px;font-weight:600}
+.cap small{display:block;font-weight:400;font-size:12px}
+/* bottom nav */
+.nav{position:fixed;z-index:30;left:0;right:0;bottom:0;display:flex;justify-content:center;align-items:center;gap:10px;padding:10px 12px calc(env(safe-area-inset-bottom,0px) + 12px);pointer-events:none}
+.nav>*{pointer-events:auto}
+.dots{display:flex;gap:8px;padding:10px 14px;border-radius:999px;background:var(--cream);border:2.5px solid var(--ink);box-shadow:3px 3px 0 var(--ink)}
+.dots i{width:12px;height:12px;border-radius:50%;background:#fff;border:2px solid var(--ink);cursor:pointer;transition:.2s}
+.dots i.on{width:30px;border-radius:8px;background:var(--pink)}
+.arrow{width:44px;height:44px;border-radius:50%;border:2.5px solid var(--ink);background:var(--sky);color:var(--ink);font:700 22px Fredoka,sans-serif;cursor:pointer;box-shadow:3px 3px 0 var(--ink)}
+.mode-scroll~.nav .arrow{display:none}
+footer{margin-top:26px;font-size:14px;color:var(--muted)}
+@media(prefers-reduced-motion:reduce){.mqi{animation:none}*{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><symbol id="st" viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.7-5.4 4.8 1.6 7L12 17.3 5.8 21l1.6-7L2 9.3l7.1-.7z"/></symbol></svg>
+
+<header>
+<div class="mq"><div class="mqi" id="mq"></div></div>
+<div class="nav1">
+<div class="logo"><svg class="star"><use href="#st"/></svg>diva.portfolio</div>
+<div class="seg" role="group" aria-label="Mode tampilan"><button id="mScroll" class="on">↕ Scroll</button><button id="mSlide">↔ Slide</button></div>
+</div>
+</header>
+
+<main id="main" class="mode-scroll">
+
+<section id="home" data-t="Home">
+<div class="hero">
+<div class="collage">
+<div class="stk s2">content planning</div>
+<div class="stk s1">open to<br>intern!</div>
+<div class="stk idc"><span style="font-size:11px;letter-spacing:.1em">OFFICIAL MEMBER</span><b class="hand" style="font-size:28px">DIVA</b>Marketing &amp; Social Media<br><span class="muted" style="font-weight:500;font-size:13px">JOINED: 2026 ✓ APPROVED</span></div>
+<div class="stk s3">meta ads</div>
+<svg class="star bigstar"><use href="#st"/></svg>
+<div class="note hand n1">graphic design ↗</div>
+</div>
+<div class="hbody">
+<div class="kick">Portfolio 2026 · hai!</div>
+<h1>aku <em>Diva</em>,<br>marketing &amp; social media.</h1>
+<p class="muted">Aku suka merancang konten, menyusun strateginya, lalu mengeksekusinya jadi visual yang enak dilihat, dari content planning sampai Meta Ads.</p>
+<div class="row"><a class="btn" href="#contact" data-go="contact">Hubungi aku</a><a class="btn b" href="#work" data-go="work">Lihat hasil</a></div>
+</div>
+</div>
+<div class="beads" id="beads" aria-hidden="true"></div>
+</section>
+
+<section id="about" data-t="About">
+<h2>tentang <mark>aku</mark></h2><div class="sub hand">sedikit cerita dulu ya ✿</div>
+<div class="grid">
+<div class="card tilt"><h3>Siapa aku</h3><p class="muted" style="margin-top:8px">Aku belajar marketing langsung dari organisasi dan project kuliah. Fokusku di social media: merencanakan konten, membuat brief, dan menjaga visual tetap konsisten dengan tujuan kampanye.</p></div>
+<div class="card tilt"><h3>Yang aku cari</h3><p class="muted" style="margin-top:8px">Posisi Marketing &amp; Social Media Intern, tempat aku belajar dari tim berpengalaman sambil berkontribusi lewat konten dan desain.</p></div>
+<div class="card tilt"><h3>Cara kerjaku</h3><p class="muted" style="margin-top:8px">Riset dulu, lanjut ide, lalu eksekusi dan evaluasi. Aku terbuka pada feedback dan senang menguji ide kecil lebih dulu.</p></div>
+</div>
+</section>
+
+<section id="exp" data-t="Experience">
+<h2>pengalaman <mark>aku</mark></h2><div class="sub hand">dari organisasi &amp; project kuliah</div>
+<div class="grid">
+<div class="card role tilt"><h3>Marketing Team — AFL 2026</h3><span class="tag">AIESEC · Summer &amp; Winter Peak</span>
+<ul><li>Content planning, briefing, dan strategi untuk feed Instagram</li><li>Market research lewat Google Form: 110 respons, difilter jadi 92 responden</li><li>Boost feed dengan Meta Ads dan membaca Meta Insights</li><li>Mengelola booth marketing offline selama 2 hari</li></ul></div>
+<div class="card role tilt"><h3>Staff Graphic Designer — AFL 2025</h3><span class="tag">AIESEC · 2025</span>
+<ul><li>Mendesain materi visual untuk Summer &amp; Winter Peak 2025</li><li>Tema kreatif: Zootopia, Boss Baby, dan kolaborasi Woods</li></ul></div>
+<div class="card role tilt"><h3>Project Kuliah</h3><span class="tag">Konten &amp; digital</span>
+<ul><li>Short movie, dipublikasikan di YouTube</li><li>Website dengan XAMPP &amp; phpMyAdmin (dibangun dengan bantuan AI)</li></ul></div>
+</div>
+</section>
+
+<section id="work" data-t="Highlights">
+<h2>angka <mark>&amp; bukti</mark></h2><div class="sub hand">hasil yang bisa dilihat</div>
+<div class="grid">
+<div class="card stat tilt"><b>56 → 112</b><span>Sign-up AFL, Summer vs Winter Peak 2026. Kenaikan ini juga dipengaruhi evaluasi program, bukan hanya marketing.</span></div>
+<div class="card stat tilt"><b>~10.9K</b><span>Views feed bertema Haikyuu di Winter Peak, hasil perencanaan content engagement.</span></div>
+<div class="card stat tilt"><b>~40</b><span>Orang ikut “draw your face” di booth; sekitar 20 menulis username IG untuk follow-up lewat DM.</span></div>
+<div class="card stat tilt"><b>92</b><span>Responden valid riset pasar yang mengarahkan kurikulum Public Speaking di Summer Peak.</span></div>
+</div>
+</section>
+
+<section id="design" data-t="Design">
+<h2>galeri <mark>desain</mark></h2><div class="sub hand">AFL 2025 &amp; 2026</div>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr))">
+<div class="frame tilt"><div class="pic p1">🦊</div><div class="cap">Zootopia<small>Summer Peak 2025</small></div></div>
+<div class="frame tilt"><div class="pic p2">👶</div><div class="cap">Boss Baby<small>Winter Peak 2025</small></div></div>
+<div class="frame tilt"><div class="pic p3">🤝</div><div class="cap">Kolaborasi Woods<small>AFL 2025</small></div></div>
+<div class="frame tilt"><div class="pic p4">🏐</div><div class="cap">Feed Haikyuu<small>Winter Peak 2026</small></div></div>
+</div>
+<p class="muted" style="margin-top:16px;font-size:14px">Ganti emoji di .pic dengan tag &lt;img&gt; berisi desainmu.</p>
+</section>
+
+<section id="skills" data-t="Skills">
+<h2>skill <mark>&amp; tools</mark></h2><div class="sub hand">yang aku bawa ✦</div>
+<div class="grid">
+<div class="card tilt"><h3>Marketing</h3><div class="chips"><span class="chip">Content planning</span><span class="chip">Content briefing</span><span class="chip">Content strategy</span><span class="chip">Market research</span></div></div>
+<div class="card tilt"><h3>Social Media</h3><div class="chips"><span class="chip">Instagram</span><span class="chip">Meta Ads</span><span class="chip">Meta Insights</span><span class="chip">Offline activation</span></div></div>
+<div class="card tilt"><h3>Creative</h3><div class="chips"><span class="chip">Graphic design</span><span class="chip">Short video</span><span class="chip">Web dasar</span></div></div>
+</div>
+</section>
+
+<section id="contact" data-t="Contact">
+<h2>yuk <mark>ngobrol</mark></h2><div class="sub hand">join the team? ♡</div>
+<div class="card" style="max-width:580px">
+<p class="muted">Terbuka untuk internship Marketing &amp; Social Media.</p>
+<div class="row" style="margin-top:18px"><a class="btn" href="mailto:emailkamu@example.com">Email</a><a class="btn b" href="https://instagram.com/usernamekamu">Instagram</a><a class="btn" href="https://linkedin.com/in/usernamekamu">LinkedIn</a></div>
+</div>
+<footer>© 2026 Diva · Dibuat dengan Claude</footer>
+</section>
+</main>
+
+<div class="nav"><button class="arrow" id="prev" aria-label="Sebelumnya">‹</button><div class="dots" id="dots"></div><button class="arrow" id="next" aria-label="Berikutnya">›</button></div>
+
+<script>
+const star='<svg class="star"><use href="#st"/></svg>';
+const msgs=['Content planning','Meta Ads','Graphic design','Market research','Open to internship'];
+const one=msgs.map(t=>'<span>'+t+'</span>'+star).join('');
+document.getElementById('mq').innerHTML=one+one+one+one;
+document.getElementById('beads').innerHTML='MARKETING'.split('').map(c=>'<span>'+c+'</span>').join('')+'<span style="background:none;border:0;box-shadow:none"></span>'+'SOCIAL'.split('').map(c=>'<span>'+c+'</span>').join('');
+const main=document.getElementById('main'),secs=[...main.querySelectorAll('section')],dots=document.getElementById('dots');
+let mode='scroll',cur=0;
+secs.forEach((s,i)=>{const d=document.createElement('i');d.title=s.dataset.t;d.onclick=()=>go(i);dots.appendChild(d)});
+function mark(i){cur=i;[...dots.children].forEach((d,k)=>d.classList.toggle('on',k===i))}
+function go(i){i=Math.max(0,Math.min(secs.length-1,i));
+ if(mode==='slide')main.scrollTo({left:i*main.clientWidth,behavior:'smooth'});
+ else secs[i].scrollIntoView({behavior:'smooth',block:'start'});mark(i)}
+function setMode(m){mode=m;main.className='mode-'+m;
+ document.body.style.overflow=m==='slide'?'hidden':'';
+ document.getElementById('mScroll').classList.toggle('on',m==='scroll');
+ document.getElementById('mSlide').classList.toggle('on',m==='slide');
+ const i=cur;requestAnimationFrame(()=>{if(m==='slide')main.scrollTo({left:i*main.clientWidth});else secs[i].scrollIntoView({block:'start'})});
+ try{localStorage.setItem('pf-mode',m)}catch(e){}}
+document.getElementById('mScroll').onclick=()=>setMode('scroll');
+document.getElementById('mSlide').onclick=()=>setMode('slide');
+document.getElementById('prev').onclick=()=>go(cur-1);
+document.getElementById('next').onclick=()=>go(cur+1);
+document.querySelectorAll('[data-go]').forEach(a=>a.onclick=e=>{e.preventDefault();go(secs.findIndex(s=>s.id===a.dataset.go))});
+main.addEventListener('scroll',()=>{if(mode==='slide')mark(Math.round(main.scrollLeft/main.clientWidth))},{passive:true});
+addEventListener('scroll',()=>{if(mode!=='scroll')return;let b=0;secs.forEach((s,i)=>{if(s.getBoundingClientRect().top<innerHeight*.45)b=i});mark(b)},{passive:true});
+addEventListener('keydown',e=>{if(mode!=='slide')return;if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1)});
+addEventListener('resize',()=>{if(mode==='slide')main.scrollTo({left:cur*main.clientWidth})});
+mark(0);
+try{if(localStorage.getItem('pf-mode')==='slide')setMode('slide')}catch(e){}
+</script>
+</body>
+</html>
