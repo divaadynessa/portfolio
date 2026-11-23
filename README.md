@@ -1,6 +1,6 @@
 # Diva Diamantiara Dynessa — Portfolio Website
 
-A responsive, static portfolio website built with HTML, CSS, and vanilla JavaScript.
+A responsive, static portfolio website built with HTML, CSS, and vanilla JavaScript. Visual direction: iOS-inspired soft pink/blue with translucent glass surfaces.
 
 ## Files
 - `index.html` — page structure and portfolio content
